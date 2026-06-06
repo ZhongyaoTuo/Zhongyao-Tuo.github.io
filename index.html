@@ -1,0 +1,146 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhongyao Tuo - Personal Homepage</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      max-width: 520px;
+      width: 90%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal h1 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .modal .subtitle {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .lang-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .lang-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      padding: 2rem 1.5rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 16px;
+      background: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    .lang-btn:hover {
+      border-color: #667eea;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.25);
+    }
+
+    .lang-btn .icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .lang-btn .label {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .lang-btn .desc {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 0.25rem;
+    }
+
+    .footer-note {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="modal">
+    <h1>🌐 欢迎 / Welcome</h1>
+    <p class="subtitle">请选择您的语言偏好<br>Please choose your language</p>
+
+    <div class="lang-buttons">
+      <button class="lang-btn" onclick="selectLang('zh')">
+        <span class="icon">🇨🇳</span>
+        <span class="label">中文</span>
+        <span class="desc">Chinese</span>
+      </button>
+      <button class="lang-btn" onclick="selectLang('en')">
+        <span class="icon">🇬🇧</span>
+        <span class="label">English</span>
+        <span class="desc">English</span>
+      </button>
+    </div>
+
+    <p class="footer-note">可随时切换语言</p>
+  </div>
+
+  <script>
+    (function() {
+      // 自动跳转：如果 localStorage 有记录
+      var saved = localStorage.getItem('site-language');
+      if (saved === 'zh') {
+        window.location.replace('/home-zh/');
+      } else if (saved === 'en') {
+        window.location.replace('/home-en/');
+      }
+    })();
+
+    function selectLang(lang) {
+      localStorage.setItem('site-language', lang);
+      if (lang === 'zh') {
+        window.location.replace('/home-zh/');
+      } else {
+        window.location.replace('/home-en/');
+      }
+    }
+  </script>
+</body>
+</html>

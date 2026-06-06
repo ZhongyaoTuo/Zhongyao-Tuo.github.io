@@ -1,0 +1,32 @@
+<nav class="greedy-nav">
+  <a class="site-title" href="{{ '/' | relative_url }}">
+    {% if site.logo and site.logo != "" and site.logo != " " %}
+      <img class="site-logo" src="{{ site.logo | relative_url }}" alt="">
+    {% endif %}
+    {{ site.title }}
+  </a>
+  <ul class="visible-links">
+    {%- for link in site.data.navigation.main -%}
+      <li class="masthead__menu-item">
+        <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}
+           data-zh="{{ link.title }}"
+           data-en="{{ link.en_title | default: link.title }}"
+           data-zh-url="{{ link.url | relative_url }}"
+           data-en-url="{{ link.en_url | default: link.url | relative_url }}">
+          <span class="nav-label">{{ link.title }}</span>
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+  {% if site.search == true %}
+  <button class="search__toggle" type="button">
+    <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+    <i class="fas fa-search"></i>
+  </button>
+  {% endif %}
+  <button class="greedy-nav__toggle hidden" type="button">
+    <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+    <div class="navicon"></div>
+  </button>
+  <ul class="hidden-links hidden"></ul>
+</nav>

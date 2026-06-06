@@ -1,0 +1,58 @@
+/* ============================================
+   辅助样式：确保侧边栏链接水平排列 + 论文卡片
+   ============================================ */
+
+/* 强制所有社交链接图标与文字同行 */
+.author__urls.social-icons li a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  flex-direction: row !important;
+  white-space: nowrap;
+}
+
+/* 论文卡片样式（与之前一致） */
+.publication-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+.pub-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.pub-authors {
+  font-style: italic;
+  color: #495057;
+  margin-bottom: 0.25rem;
+}
+.pub-venue {
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+.pub-note {
+  color: #28a745;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+.pub-links a {
+  margin-right: 1rem;
+  font-size: 0.85rem;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .pub-title { font-size: 0.95rem; }
+  .pub-authors, .pub-venue { font-size: 0.85rem; }
+}
+/* ===== 强制所有页面的侧边栏链接水平排列 ===== */
+.sidebar .author__urls.social-icons li a,
+.author__urls.social-icons li a {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  white-space: nowrap !important;
+}

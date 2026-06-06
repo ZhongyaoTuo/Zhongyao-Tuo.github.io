@@ -1,0 +1,35 @@
+# main navigation
+main:
+  - title: "个人简介"
+    en_title: "About"
+    url: /home-zh/
+    en_url: /home-en/
+  - title: "论文发表"
+    en_title: "Publications"
+    url: /publications/
+    en_url: /publications-en/
+  - title: "研究项目"
+    en_title: "Projects"
+    url: /projects/
+    en_url: /projects-en/
+  - title: "荣誉奖项"
+    en_title: "Awards"
+    url: /awards/
+    en_url: /awards-en/
+  - title: "简历"
+    en_title: "CV"
+    url: /cv/
+    en_url: /cv-en/
+
+# 可选：侧边栏或页脚导航
+docs:
+  - title: "相关链接"
+    en_title: "Links"
+    children:
+      - title: "GitHub"
+        url: "https://github.com/ZhongyaoTuo"
+      - title: "OpenReview"
+        url: "https://openreview.net/profile?id=~Zhongyao_Tuo1"
+      - title: "百度百科"
+        en_title: "Baidu Baike"
+        url: "https://baike.baidu.com/item/%E5%BA%B9%E5%BF%A0%E6%9B%9C/65136312"

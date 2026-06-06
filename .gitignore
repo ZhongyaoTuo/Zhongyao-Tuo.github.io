@@ -1,0 +1,20 @@
+# Jekyll 临时文件
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby 依赖
+vendor/
+Gemfile.lock   # 注意：通常 Gemfile.lock 可以提交，但如果你希望自动生成可以不提交
+.bundle/
+
+# 编辑器临时文件
+.DS_Store
+*.swp
+*.swo
+*~
+
+# 临时图片（你微信图片等可以忽略）
+assets/images/tmp.md
+assets/images/微信图片_*.png
