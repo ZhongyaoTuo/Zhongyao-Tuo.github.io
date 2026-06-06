@@ -3,7 +3,8 @@
     {% if site.logo and site.logo != "" and site.logo != " " %}
       <img class="site-logo" src="{{ site.logo | relative_url }}" alt="">
     {% endif %}
-    {{ site.title }}
+    <span data-lang="zh">{{ site.title }}</span>
+    <span data-lang="en" style="display:none;">Zhongyao Tuo</span>
   </a>
   <ul class="visible-links">
     {%- for link in site.data.navigation.main -%}

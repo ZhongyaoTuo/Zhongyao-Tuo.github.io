@@ -56,3 +56,28 @@
   gap: 0.5rem !important;
   white-space: nowrap !important;
 }
+
+/* ===== 全局右侧正文区域字体大小 ===== */
+.page__content {
+  font-size: 0.925rem;
+  line-height: 1.7;
+}
+
+/* 页面表格样式：与奖项条目一致 */
+.page__content table {
+  font-size: 0.9rem;
+}
+.page__content table th,
+.page__content table td {
+  padding: 6px 10px;
+}
+
+/* 论文表格中标题列稍宽 */
+.page__content .pub-table-title {
+  min-width: 200px;
+}
+
+/* 响应式表格：小屏可横向滚动 */
+.page__content .table-wrapper {
+  overflow-x: auto;
+}

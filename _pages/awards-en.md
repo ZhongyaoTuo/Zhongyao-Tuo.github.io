@@ -42,10 +42,12 @@ author_profile: true
 
 ## 🎯 Social Practice
 
-- 10th National Memorial Ceremony for Nanjing Massacre Victims
-- 2nd Xianlin University Town Art Festival
-- 27th "Tianyi" Culture and Art Festival
-- Led multiple "Three Visits to the Countryside" teams to Hubei and Jiangsu provinces, delivering over ten science popularization lectures
+| # | Activity |
+|---|---|
+| 1 | 10th National Memorial Ceremony for Nanjing Massacre Victims |
+| 2 | 2nd Xianlin University Town Art Festival |
+| 3 | 27th "Tianyi" Culture and Art Festival |
+| 4 | Led multiple "Three Visits to the Countryside" teams to Hubei and Jiangsu provinces, delivering over ten science popularization lectures |
 
 <script>
 (function() { localStorage.setItem('site-language', 'en'); })();
