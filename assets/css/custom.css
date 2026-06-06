@@ -77,45 +77,52 @@
   overflow-x: auto;
 }
 
-/* ===== 个人荣誉两列表格布局 ===== */
-.honor-grid-table {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+/* ===== 个人荣誉两列布局（CSS columns，自动行对齐）===== */
+.honor-columns {
+  columns: 2;
+  column-gap: 1.5rem;
 }
-.honor-grid-table table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-}
-.honor-grid-table table th {
-  background: #f2f3f5 !important;
-  font-weight: 600;
-  text-align: left;
-  padding: 6px 10px;
-  border-bottom: 2px solid #dce0e5;
-}
-.honor-grid-table table td {
-  padding: 6px 10px;
+.honor-columns .honor-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.5rem;
+  padding: 0.45rem 0;
   border-bottom: 1px solid #e9ecef;
+  font-size: 0.9rem;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+.honor-columns .honor-row .honor-name {
+  font-weight: 500;
+}
+.honor-columns .honor-row .honor-from {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+.honor-columns .honor-row .honor-year {
+  color: #999;
+  font-size: 0.8rem;
+  margin-left: auto;
+  white-space: nowrap;
 }
 @media (max-width: 768px) {
-  .honor-grid-table {
-    grid-template-columns: 1fr;
+  .honor-columns {
+    columns: 1;
   }
 }
 
 /* ==========================================================
    三分区布局（CSS-only，不修改 HTML 结构）
-   ┌──────────┬──────────────────────────────────┐
-   │          │ 顶部导航栏 (fixed)                │
-   │ 左侧固定  ├──────────────────────────────────┤
-   │ 个人简介  │                                  │
-   │ sidebar  │ 右侧内容区域 (可滚动)              │
-   │ fixed    │  margin-left: 280px              │
-   │ 280px    │  padding-top: 76px               │
-   │          │  宽度自适应，占满剩余空间           │
-   └──────────┴──────────────────────────────────┘
+   ┌──────────┬───────────────────────────────────┐
+   │          │ 顶部导航栏 (fixed)                 │
+   │ 左侧固定  ├───────────────────────────────────┤
+   │ 个人简介  │                                   │
+   │ sidebar  │ 右侧内容区域 (可滚动)               │
+   │ fixed    │  margin-left: 420px               │
+   │ 420px    │  padding-top: 76px                │
+   │          │  宽度自适应，占满剩余空间            │
+   └──────────┴───────────────────────────────────┘
    ========================================================== */
 
 /* ---- 1. 左侧个人简介栏：fixed 在屏幕最左侧 ---- */
@@ -123,7 +130,7 @@
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
-  width: 280px !important;
+  width: 420px !important;
   height: 100vh !important;
   max-height: 100vh !important;
   overflow-y: auto !important;
@@ -150,7 +157,7 @@
 .masthead {
   position: fixed !important;
   top: 0 !important;
-  left: 280px !important;
+  left: 420px !important;
   right: 0 !important;
   z-index: 1001 !important;
   height: 56px !important;
@@ -181,7 +188,7 @@ body {
 /* ---- 3. 右侧内容区域：可滚动，占满剩余空间 ---- */
 .initial-content {
   /* 在左侧栏右侧开始 */
-  margin-left: 280px !important;
+  margin-left: 420px !important;
   /* 给固定导航栏留出空间 + 20px 间距 */
   padding-top: 76px !important;
   /* 占满剩余宽度 */
@@ -222,12 +229,12 @@ body {
 
 /* 搜索结果覆盖层 */
 .search-content {
-  margin-left: 280px !important;
+  margin-left: 420px !important;
 }
 
 /* 页脚 */
 .page__footer {
-  margin-left: 280px !important;
+  margin-left: 420px !important;
   padding: 1rem 30px !important;
 }
 

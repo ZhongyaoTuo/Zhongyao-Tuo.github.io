@@ -4,12 +4,6 @@ permalink: /publications-en/
 author_profile: true
 ---
 
-<div style="text-align:right; margin-bottom:1rem;">
-  <a href="/publications/" onclick="localStorage.setItem('site-language','zh')" style="font-size:0.85rem; color:#667eea; text-decoration:none;">
-    🌐 中文版
-  </a>
-</div>
-
 ## Journal Publications (8 total)
 
 **Note**: Sorted by publication date (descending). Zhongyao Tuo is a contributing author in all.

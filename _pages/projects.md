@@ -4,12 +4,6 @@ permalink: /projects/
 author_profile: true
 ---
 
-<div style="text-align:right; margin-bottom:1rem;">
-  <a href="/projects-en/" onclick="localStorage.setItem('site-language','en')" style="font-size:0.85rem; color:#667eea; text-decoration:none;">
-    🌐 English Version
-  </a>
-</div>
-
 ## 代表性项目
 
 ### AI+Quantum 教学机（全球首台）

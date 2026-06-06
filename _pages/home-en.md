@@ -4,28 +4,6 @@ permalink: /home-en/
 author_profile: true
 ---
 
-<div style="text-align:right; margin-bottom:1rem;">
-  <a href="/home-zh/" onclick="localStorage.setItem('site-language','zh')" style="font-size:0.85rem; color:#667eea; text-decoration:none;">
-    🌐 中文版
-  </a>
-</div>
-
-<style>
-.quick-links-en { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.quick-links-en a {
-  background: #f0f2ff; color: #667eea; padding: 6px 14px; border-radius: 20px;
-  text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: all 0.2s;
-}
-.quick-links-en a:hover { background: #667eea; color: #fff; }
-</style>
-
-<div class="quick-links-en">
-  <a href="/publications-en/">📄 Publications</a>
-  <a href="/projects-en/">🔬 Projects</a>
-  <a href="/awards-en/">🏅 Awards</a>
-  <a href="/cv-en/">📋 CV</a>
-</div>
-
 ## About Me ✨
 
 I am **Zhongyao Tuo**, a Member of the Communist Party of China and an undergraduate student majoring in Intelligent Science and Technology at the College of Automation & College of Artificial Intelligence, Nanjing University of Posts and Telecommunications (NJUPT), with a **ranking of 1/62**. I have served as Academic Monitor, Deputy League Branch Secretary, Student Advisor, Student Assistant in the University Office Secretariat, and Teaching Information Officer in the Academic Affairs Office. I graduated as an Outstanding Graduate and was recommended for postgraduate studies at the School of Information Science and Technology, **ShanghaiTech University**, pursuing a Master's degree in Information and Communication Engineering.

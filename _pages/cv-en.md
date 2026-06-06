@@ -4,12 +4,6 @@ permalink: /cv-en/
 author_profile: true
 ---
 
-<div style="text-align:right; margin-bottom:1rem;">
-  <a href="/cv/" onclick="localStorage.setItem('site-language','zh')" style="font-size:0.85rem; color:#667eea; text-decoration:none;">
-    🌐 中文版
-  </a>
-</div>
-
 ## Education
 
 | Period | Institution | Major | Rank |

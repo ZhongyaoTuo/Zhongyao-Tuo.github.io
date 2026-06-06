@@ -4,12 +4,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-<div style="text-align:right; margin-bottom:1rem;">
-  <a href="/publications-en/" onclick="localStorage.setItem('site-language','en')" style="font-size:0.85rem; color:#667eea; text-decoration:none;">
-    🌐 English Version
-  </a>
-</div>
-
 ## 期刊论文（共8篇）
 
 **说明**：根据中国知网（CNKI）检索结果整理，按发表时间倒序排列。庹忠曜均为署名作者。

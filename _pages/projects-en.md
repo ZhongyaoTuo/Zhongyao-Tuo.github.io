@@ -4,12 +4,6 @@ permalink: /projects-en/
 author_profile: true
 ---
 
-<div style="text-align:right; margin-bottom:1rem;">
-  <a href="/projects/" onclick="localStorage.setItem('site-language','zh')" style="font-size:0.85rem; color:#667eea; text-decoration:none;">
-    🌐 中文版
-  </a>
-</div>
-
 ## Featured Projects
 
 ### AI+Quantum Teaching Machine (World's First)
