@@ -1,5 +1,5 @@
 /* ============================================
-   辅助样式：确保侧边栏链接水平排列 + 论文卡片
+   辅助样式：侧边栏链接水平排列 + 论文卡片
    ============================================ */
 
 /* 强制所有社交链接图标与文字同行 */
@@ -63,7 +63,7 @@
   line-height: 1.7;
 }
 
-/* 页面表格样式：与奖项条目一致 */
+/* 页面表格样式 */
 .page__content table {
   font-size: 0.9rem;
 }
@@ -75,59 +75,6 @@
 /* 响应式表格：小屏可横向滚动 */
 .page__content .table-wrapper {
   overflow-x: auto;
-}
-
-/* ===== 移除左上角标题后的导航微调 ===== */
-.masthead__inner-wrap {
-  padding: 0.5rem 1rem !important;
-}
-.greedy-nav {
-  gap: 0.25rem;
-}
-.greedy-nav .site-logo {
-  margin-right: 0;
-}
-
-/* ===== 固定顶部导航栏 ===== */
-.masthead {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  z-index: 1000 !important;
-  background: #fff !important;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
-body {
-  padding-top: 64px !important;
-}
-
-/* 左侧边栏跟随固定导航 */
-.sidebar {
-  top: 64px !important;
-}
-
-/* ===== 加宽右侧内容区域 ===== */
-/* 主容器占满宽度 */
-#main {
-  max-width: 100% !important;
-  width: 100% !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-}
-/* 内容区域占满剩余空间 */
-@media (min-width: 1024px) {
-  .sidebar + .page {
-    flex: 1 1 100% !important;
-    max-width: 100% !important;
-    width: calc(100% - 220px) !important;
-  }
-}
-/* archive 也占满 */
-.archive {
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
 }
 
 /* ===== 个人荣誉两列表格布局（与创新竞赛样式一致）===== */
@@ -155,5 +102,122 @@ body {
 @media (max-width: 768px) {
   .honor-grid-table {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   三分区布局：左侧固定 + 顶部固定 + 右侧可滚动
+   ============================================ */
+
+/* ---- 1. 左侧个人简介栏（固定） ---- */
+.sidebar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 280px !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  z-index: 1002 !important;
+  background: #fff !important;
+  border-right: 1px solid #e9ecef !important;
+  padding: 2rem 1.5rem !important;
+  float: none !important;
+  clear: none !important;
+  /* 移除主题原有的 sticky/absolute 行为 */
+  -ms-overflow-style: none;
+}
+/* 确保 sidebar 内部元素不溢出 */
+.sidebar.sticky,
+.sidebar__inner {
+  position: static !important;
+}
+
+/* ---- 2. 顶部导航栏（固定，紧贴左侧栏右侧） ---- */
+.masthead {
+  position: fixed !important;
+  top: 0 !important;
+  left: 280px !important;
+  right: 0 !important;
+  z-index: 1001 !important;
+  background: #fff !important;
+  height: 56px !important;
+  border-bottom: 1px solid #e9ecef !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  display: flex !important;
+  align-items: center !important;
+}
+.masthead__inner-wrap {
+  padding: 0 1.5rem !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.greedy-nav {
+  padding: 0 !important;
+  gap: 0.25rem;
+}
+
+/* ---- 3. 右侧内容区域（可滚动） ---- */
+/* 清除 body 上之前的 padding */
+body {
+  padding-top: 0 !important;
+  margin: 0 !important;
+}
+
+/* initial-content 和 #main 都清除固定元素的占位 */
+.initial-content {
+  margin-left: 280px !important;
+  padding-top: 76px !important;  /* 56px 导航栏 + 20px 间距 */
+  max-width: 100% !important;
+  width: auto !important;
+}
+
+#main {
+  margin-left: 0 !important;
+  padding-top: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+/* content 容器全部占满宽度 */
+.sidebar + .page {
+  flex: 1 1 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-right: 0 !important;
+  float: none !important;
+}
+.page,
+.archive {
+  max-width: 100% !important;
+  width: 100% !important;
+  float: none !important;
+}
+.archive {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* ---- 4. 小屏适配：降为普通流式布局 ---- */
+@media (max-width: 900px) {
+  .sidebar {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid #e9ecef !important;
+    padding: 1.5rem 1rem !important;
+  }
+  .masthead {
+    left: 0 !important;
+  }
+  .initial-content {
+    margin-left: 0 !important;
+    padding-top: 66px !important;  /* 56px 导航栏 + 10px 间距 */
+  }
+  #main {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
